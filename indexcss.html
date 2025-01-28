@@ -3,25 +3,178 @@
    <meta name="author"  content="Jordi Cañadas">
    <meta name="description" content="Curso de HTML de jordi">
    <meta name="keywords" content="HTML, CSS, JS, desarrollo web, zonadesarrollo">
+   
    <style>
-   body{
-      background-color: #000000;
-   }
-   title{
+         .tycli {
+      font-family: "Share Tech Mono", serif;
+      font-style: normal;
       color: #66ff00;
+      font-size:"80px";
+      }
+   #caja{
+      width: 90%;
+      height: fit-content;
+      background: #1e2918;
+      border:4px solid #1f4606;
+      border-radius: 5px;
+      margin-left: 1px;
+      margin-right: 1px;
+      }
+   body{
+      background-color: #1a1d17;
    }
-   h1{
-      color: #00ff00;
+   body::after{content:" ";display:block;position:absolute;top:0;left:0;bottom:0;right:0;
+   background:linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+   linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02),
+    rgba(0, 0, 255, 0.06));z-index:2;background-size:100% 2px,3px 100%;pointer-events:none}
+
+   header{
+      position:relative;
+      margin:auto;
+      height: 30px;
+      text-align: right;
+      margin-top: 0px;
+      margin-right: 1px;
    }
 
+
+   .zd{
+      font-size: 20px;
+      color: #66ff00;
+      line-height: 0px;
+   }
+
+   .zdf{
+      font-size: 20px;
+      color: #1f4606;
+      line-height: 200%;
+   }
+
+   #logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 60px;
+      background: #66ff00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .top{
+      background: #1f4606;
+      width: 10%
+   }
+
+   article p img{
+      float: left;
+      margin-right: 20px;
+      margin-left: 20px;
+   }
+
+   footer{
+      position: center;
+      margin: auto;
+      height: 50px;
+      width: 90%;
+      text-align: center;
+      margin-top: 0px;
+      background: #62ff00;
+      border-radius: 5px;
+   }
    </style>
 <html>
+   <header>
+      <h1 class="zd">
+         Zona Desarrollo (TM)
+      </h1>
+      <h1 id="logo" class="logo">Logo</h1>
+   </header>
+   
+   <center>
    <head>
-      <title>Css</title>>
+      <title>Css</title>
    </head>
    <body>
-      <h1>
-         Css
+      <h1 class="tycli" >
+         CSS 
       </h1>
+      <div class="caja" id="caja">
+        <body class="tycli">
+         <center>
+            <h1>
+               Formulario
+            </h1>
+            <form>
+               <label>
+                  Nombre: 
+               </label>
+               <input id="nombre" type="text" placceholder="Escribe tu nombre" value="" required>
+               <br>
+               <br>
+               <label>
+                  Apellido: 
+               </label>
+               <input id="apellido" type="text" placceholder="Escribe tu apellido" value="" required>
+               <br>
+               <br>
+               <label>
+                  Contraseña:
+               </label>
+               <input id="contraseña" type="password" placceholder="Escribe tu contraseña" value="" required>
+               <br>
+               <br>
+               <input type="number" value="0" min="0" max="100">
+               <br>
+               <br>
+               <select>
+                  <option>Opcion 1</option>
+                  <option>Opcion 2</option>
+                  <option>Opcion 3</option>
+               </select>
+               <br>
+               <br>
+               <input type="checkbox" id="Estudiante"><label for="Estudiante">Estudiante</label>
+               <input type="checkbox" id="Trabajador"><label for="Trabajador">Trabajador</label>
+               <input type="checkbox" id="Cliente"><label for="Cliente">Trabajador</label>
+               <br>
+               <br>
+               <input type="submit" value="Enviar">
+            </form>
+            <ul class="top">
+               <div><li>1</li></div>
+               <div><li>2</li></div>
+               <div><li>3</li></div>
+            </ul>
+            <section>
+               <aside id="izq"></aside>
+               <article>
+                  <h1>Articulo</h1>
+                  <p><img src="img/css.png" width="250">Si te gusta el mundo del diseño web o tienes curiosidad por empezar en este sector, probablemente ya habrás escuchado el término CSS. Se trata de una tecnología utilizada para dotar de cualidades visuales y estéticas a una página web. Si nunca has tocado esta materia, comprobarás que se trata de una forma analítica, lógica y prácticamente matemática de crear páginas web, pero gracias a ella podemos simplificar la creación de páginas y conseguir exactamente lo que buscamos.
+                     La curva de aprendizaje de CSS suele ser sencilla (es fácil aprender cosas básicas, pero complicado dominarlas), aunque también es cierto que puede resultar complejo adaptarse si nunca has programado (o eres totalmente ajeno a escribir código), pero a medida que cometes errores y vas practicando, tu capacidad para escribir código CSS mejorará progresivamente, permitiéndonos avanzar a un ritmo cada vez más veloz.
+                     ¿Qué significa CSS?
+                     Las siglas CSS (Cascading Style Sheets) significan «Hojas de estilo en cascada» y parten de un concepto simple pero muy potente: aplicar estilos (colores, formas, márgenes, etc...) a uno o varios documentos (generalmente documentos HTML, páginas webs) de forma automática y masiva.
+                     Se le denomina estilos en cascada porque se lee, procesa y aplica el código desde arriba hacia abajo (siguiendo patrones como herencia o cascada que trataremos más adelante) y en el caso de existir ambigüedad (código que se contradice), se siguen una serie de normas para resolver dicha ambigüedad.
+                     La curva de aprendizaje de CSS suele ser sencilla (es fácil aprender cosas básicas, pero complicado dominarlas), aunque también es cierto que puede resultar complejo adaptarse si nunca has programado (o eres totalmente ajeno a escribir código), pero a medida que cometes errores y vas practicando, tu capacidad para escribir código CSS mejorará progresivamente, permitiéndonos avanzar a un ritmo cada vez más veloz.
+                     ¿Qué significa CSS?
+                     Las siglas CSS (Cascading Style Sheets) significan «Hojas de estilo en cascada» y parten de un concepto simple pero muy potente: aplicar estilos (colores, formas, márgenes, etc...) a uno o varios documentos (generalmente documentos HTML, páginas webs) de forma automática y masiva.
+                     Se le denomina estilos en cascada porque se lee, procesa y aplica el código desde arriba hacia abajo (siguiendo patrones como herencia o cascada que trataremos más adelante) y en el caso de existir ambigüedad (código que se contradice), se siguen una serie de normas para resolver dicha ambigüedad.
+                     La curva de aprendizaje de CSS suele ser sencilla (es fácil aprender cosas básicas, pero complicado dominarlas), aunque también es cierto que puede resultar complejo adaptarse si nunca has programado (o eres totalmente ajeno a escribir código), pero a medida que cometes errores y vas practicando, tu capacidad para escribir código CSS mejorará progresivamente, permitiéndonos avanzar a un ritmo cada vez más veloz.
+                     ¿Qué significa CSS?
+                     Las siglas CSS (Cascading Style Sheets) significan «Hojas de estilo en cascada» y parten de un concepto simple pero muy potente: aplicar estilos (colores, formas, márgenes, etc...) a uno o varios documentos (generalmente documentos HTML, páginas webs) de forma automática y masiva.
+                     Se le denomina estilos en cascada porque se lee, procesa y aplica el código desde arriba hacia abajo (siguiendo patrones como herencia o cascada que trataremos más adelante) y en el caso de existir ambigüedad (código que se contradice), se siguen una serie de normas para resolver dicha ambigüedad.
+                  </p>
+
+               </article>
+            
+            </section>
+      </div>
+         
+   </center>
    </body>
+   <footer>
+      <h1 class="zdf" >
+         Zona Desarrollo (TM)
+      </h1>
 </html>
