@@ -19,6 +19,8 @@
     margin: auto;
     width:100%;
     height: auto;
+    clear:both;
+    display: table;
 }
 
 [class*="col-"]{
