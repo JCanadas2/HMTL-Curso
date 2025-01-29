@@ -1,11 +1,17 @@
 <!DOCTYPE html>
    <meta charset="utf-8">
    <meta name="author"  content="Jordi Cañadas">
-   <meta name="description" content="Curso de HTML de jordi">
+   <meta name="description" content="Curso de HTML de Jordi">
    <meta name="keywords" content="HTML, CSS, JS, desarrollo web, zonadesarrollo">
    
    <style>
-         .tycli {
+
+   html, body {
+   height: 100%;
+   margin: 0;
+   min-height: 142%;   
+   }
+      .tycli {
       font-family: "Share Tech Mono", serif;
       font-style: normal;
       color: #66ff00;
@@ -22,11 +28,13 @@
       }
    body{
       background-color: #1a1d17;
+      position: relative;
+      min-height: 100%;
    }
    body::after{content:" ";display:block;position:absolute;top:0;left:0;bottom:0;right:0;
    background:linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02),
-    rgba(0, 0, 255, 0.06));z-index:2;background-size:100% 2px,3px 100%;pointer-events:none}
+    rgba(0, 0, 255, 0.06));z-index:2;background-size:1000% 2px,3px 100%;pointer-events:none; height: 100%;}
 
    header{
       position:relative;
@@ -37,7 +45,44 @@
       margin-right: 1px;
    }
 
+   nav ul{
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      height: 20%;
+      margin: auto;
+      padding: 0;
+      list-style-type: none;
+   }
+   .botones{
+      position: relative;
+      list-style-type: none;
+      background: #1f4606;
+      color: #66ff00;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 5px;
+      width: 90%;
+      height: 20%;
+   }
+   a {
+      text-decoration: none;
+      outline: none;
+      color: inherit;
+   }
 
+   li.botones:hover{ 
+      text-decoration: none;
+      background-color: #66ff00;
+      color: #1f4606;
+   }
+
+   li.botones:active{ 
+      text-decoration: none;
+      background-color: #4400ff;
+      color: #000000;
+   }
+   
    .zd{
       font-size: 20px;
       color: #66ff00;
@@ -48,7 +93,16 @@
       font-size: 20px;
       color: #1f4606;
       line-height: 200%;
+      position: center;
+      margin: auto;
+      height: 50px;
+      width: 90%;
+      text-align: center;
+      margin-top: 0px;
+      background: #62ff00;
+      border-radius: 5px;   
    }
+   
 
    #logo {
       position: absolute;
@@ -73,6 +127,53 @@
       margin-left: 20px;
    }
 
+   .form{
+      background: #1f4606;
+      color: #66ff00;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 5px;
+      line-height: 5px;
+   }
+
+   .form_usr{
+      background: #1f4606;
+      color: #66ff00;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 5px;
+      line-height: 5px;
+      background:url(img/user.png);
+      background-repeat:no-repeat;
+      background-position:right;
+      background-size: contain;
+      background-color: #1f4606;
+   }
+
+   .form_psw{
+      background: #1f4606;
+      color: #66ff00;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 5px;
+      line-height: 5px;
+      background:url(img/psw.png);
+      background-repeat:no-repeat;
+      background-position:right;
+      background-size: contain;
+      background-color: #1f4606;
+   }
+
+   .form_enviar{
+      background: #1f4606;
+      color: #66ff00;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 5px;
+      line-height: 5px;
+      width: 90px;
+      height: 35px;
+   }
    footer{
       position: center;
       margin: auto;
@@ -81,7 +182,7 @@
       text-align: center;
       margin-top: 0px;
       background: #62ff00;
-      border-radius: 5px;
+      border-radius: 5px;   
    }
    </style>
 <html>
@@ -96,10 +197,20 @@
    <head>
       <title>Css</title>
    </head>
+   
    <body>
       <h1 class="tycli" >
          CSS 
       </h1>
+      <nav>
+         <ul>
+            <a href="#"><li class="botones">Botón 1</a></li>
+            <a href="#"><li class="botones">Botón 2</a></li>
+            <a href="#"><li class="botones">Botón 3</a></li>
+            <a href="#"><li class="botones">Botón 4</a></li>
+            <a href="#"><li class="botones">Botón 5</a></li>
+         </ul>
+      </nav>
       <div class="caja" id="caja">
         <body class="tycli">
          <center>
@@ -110,37 +221,37 @@
                <label>
                   Nombre: 
                </label>
-               <input id="nombre" type="text" placceholder="Escribe tu nombre" value="" required>
+               <input class="form_usr" id="nombre" type="text" placceholder="Escribe tu nombre" value="" required>
                <br>
                <br>
                <label>
                   Apellido: 
                </label>
-               <input id="apellido" type="text" placceholder="Escribe tu apellido" value="" required>
+               <input class="form" id="apellido" type="text" placceholder="Escribe tu apellido" value="" required>
                <br>
                <br>
                <label>
                   Contraseña:
                </label>
-               <input id="contraseña" type="password" placceholder="Escribe tu contraseña" value="" required>
+               <input class="form_psw" id="contraseña" type="password" placceholder="Escribe tu contraseña" value="" required>
                <br>
                <br>
-               <input type="number" value="0" min="0" max="100">
+               <input class="form" type="number" value="0" min="0" max="100">
                <br>
                <br>
-               <select>
+               <select class="form">
                   <option>Opcion 1</option>
                   <option>Opcion 2</option>
                   <option>Opcion 3</option>
                </select>
                <br>
                <br>
-               <input type="checkbox" id="Estudiante"><label for="Estudiante">Estudiante</label>
-               <input type="checkbox" id="Trabajador"><label for="Trabajador">Trabajador</label>
-               <input type="checkbox" id="Cliente"><label for="Cliente">Trabajador</label>
+               <input class="form" type="checkbox" id="Estudiante"><label for="Estudiante">Estudiante</label>
+               <input class="form" type="checkbox" id="Trabajador"><label for="Trabajador">Trabajador</label>
+               <input class="form" type="checkbox" id="Cliente"><label for="Cliente">Trabajador</label>
                <br>
                <br>
-               <input type="submit" value="Enviar">
+               <input class="form_enviar" type="submit" value="Enviar">
             </form>
             <ul class="top">
                <div><li>1</li></div>
@@ -167,14 +278,16 @@
                   </p>
 
                </article>
-            
+   </center>
+  
+
             </section>
       </div>
-         
-   </center>
-   </body>
+     
+   
    <footer>
       <h1 class="zdf" >
          Zona Desarrollo (TM)
       </h1>
+</body>
 </html>
